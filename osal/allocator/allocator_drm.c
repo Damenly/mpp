@@ -82,7 +82,7 @@ typedef struct {
     RK_U32  flags;
 } allocator_ctx_drm;
 
-static const char *dev_drm = "/dev/dri/card0";
+static const char *dev_drm = "/dev/dri/renderD128";
 
 static int drm_ioctl(int fd, int req, void *arg)
 {

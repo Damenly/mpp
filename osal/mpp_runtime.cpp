@@ -86,7 +86,7 @@ MppRuntimeService::MppRuntimeService()
         mpp_log("found ion allocator\n");
     }
 
-    if (access("/dev/dri/card0", F_OK | R_OK | W_OK)) {
+    if (access("/dev/dri/renderD128", F_OK | R_OK | W_OK)) {
         allocator_valid[MPP_BUFFER_TYPE_DRM] = 0;
         mpp_log("NOT found drm allocator\n");
     } else {
