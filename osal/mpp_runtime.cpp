@@ -95,7 +95,6 @@ MppRuntimeService::MppRuntimeService()
     }
 
     if ((!access("/dev/mpp_service", F_OK | R_OK | W_OK)) &&
-        allocator_valid[MPP_BUFFER_TYPE_ION] &&
         allocator_valid[MPP_BUFFER_TYPE_DRM]) {
         allocator_valid[MPP_BUFFER_TYPE_ION] = 0;
 
