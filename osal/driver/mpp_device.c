@@ -43,7 +43,8 @@ MPP_RET mpp_dev_init(MppDev *ctx, MppClientType type)
     }
 
     mpp_env_get_u32("mpp_device_debug", &mpp_device_debug, 0);
-
+    mpp_device_debug = 1;
+    
     *ctx = NULL;
 
     RK_U32 codec_type = mpp_get_vcodec_type();

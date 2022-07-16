@@ -161,7 +161,8 @@ int VPUClientInit(VPU_CLIENT_TYPE type)
     fd = open(path, O_RDWR);
 
     mpp_env_get_u32("vpu_debug", &vpu_debug, 0);
-
+    vpu_debug = 1;
+    
     ioctl_version = mpp_get_ioctl_version();
 
     if (fd == -1) {

@@ -27,7 +27,7 @@
 #include "hal_vp9d_rkv.h"
 #include "hal_vp9d_vdpu34x.h"
 
-RK_U32 hal_vp9d_debug = 0;
+RK_U32 hal_vp9d_debug = 1;
 
 MPP_RET hal_vp9d_init(void *ctx, MppHalCfg *cfg)
 {
@@ -58,7 +58,7 @@ MPP_RET hal_vp9d_init(void *ctx, MppHalCfg *cfg)
     p->packet_slots = cfg->packet_slots;
 
     mpp_env_get_u32("hal_vp9d_debug", &hal_vp9d_debug, 0);
-
+    hal_vp9d_debug = 1;
     ret = p->api->init(ctx, cfg);
 
     return ret;

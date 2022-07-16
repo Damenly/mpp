@@ -141,7 +141,8 @@ void check_mpp_service_cap(RK_U32 *codec_type, RK_U32 *hw_ids, MppServiceCmdCap 
 
     /* for device check on startup */
     mpp_env_get_u32("mpp_device_debug", &mpp_device_debug, 0);
-
+    mpp_device_debug = 1;
+    
     *codec_type = 0;
     memset(hw_ids, 0, sizeof(RK_U32) * 32);
 

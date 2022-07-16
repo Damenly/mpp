@@ -195,6 +195,7 @@ static MPP_RET os_allocator_drm_open(void **ctx, MppAllocatorCfg *cfg)
     *ctx = NULL;
 
     mpp_env_get_u32("drm_debug", &drm_debug, 0);
+    drm_debug = 1;
 
     fd = open(dev_drm, O_RDWR);
     if (fd < 0) {

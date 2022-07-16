@@ -362,7 +362,8 @@ MPP_RET vp9d_parser_init(Vp9CodecContext *vp9_ctx, ParserCfg *init)
     mpp_buf_slot_setup(s->slots, 25);
 
     mpp_env_get_u32("vp9d_debug", &vp9d_debug, 0);
-
+    vp9d_debug = 1;
+    
     return MPP_OK;
 }
 

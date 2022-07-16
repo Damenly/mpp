@@ -427,7 +427,8 @@ static MppApi mpp_api = {
 MPP_RET mpp_create(MppCtx *ctx, MppApi **mpi)
 {
     mpp_env_get_u32("mpi_debug", &mpi_debug, 0);
-
+    mpi_debug = 1;
+    
     if (NULL == ctx || NULL == mpi) {
         mpp_err_f("invalid input ctx %p mpi %p\n", ctx, mpi);
         return MPP_ERR_NULL_PTR;
